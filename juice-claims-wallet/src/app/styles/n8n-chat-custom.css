@@ -1,0 +1,54 @@
+/* ------------------------------------------------
+   Styles for custom chat bubble
+------------------------------------------------- */
+
+@import "tailwindcss";
+
+.chat-button-wrapper {
+  width: 64px;
+  height: 64px;
+  background-color: #2563eb; /* Indigo-600 (Tailwind color) */
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.chat-button-wrapper:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* ------------------------------------------------
+   Custom styles to override n8n chat widget styles
+   (Optional - only if you want to adjust widget look)
+------------------------------------------------- */
+
+.n8n-chat-container {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.n8n-chat-header {
+  background-color: #2563eb; /* Indigo-600 */
+  color: white;
+  font-weight: bold;
+}
+
+.n8n-chat-input {
+  border-radius: 6px;
+  border: 1px solid #2563eb;
+}
+
+.n8n-chat-bubble--bot {
+  background-color: #f3f4f6; /* Tailwind gray-100 */
+  color: #111827; /* Tailwind gray-900 */
+}
+
+.n8n-chat-bubble--user {
+  background-color: #2563eb; /* Indigo-600 */
+  color: #fff;
+}
