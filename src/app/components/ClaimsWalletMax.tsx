@@ -402,12 +402,15 @@ export function ClaimsWalletMax() {
         />
       </div>
 
-      {/* Page-specific help sidebar */}
-      <HelpSidebarBase 
-        isOpen={isHelpOpen}
-        onClose={toggleHelpSidebar}
-        content={ClaimsWalletCardPlus}
-      />
+     <HelpSidebarBase
+  isOpen={isHelpOpen}
+  onClose={toggleHelpSidebar}
+  content={{
+    title: 'Claims Wallet Help',
+    description: 'Details about using the Claims Wallet.',
+    content: <ClaimsWalletCardPlus balance={0} />
+  }}
+/>
 
       <ChatBubble />
       
