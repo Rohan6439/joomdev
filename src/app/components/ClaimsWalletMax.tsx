@@ -25,15 +25,15 @@ import { ClaimsWalletCardPlus } from "../components/ClaimsWalletCardPlus";
 
 export function ClaimsWalletMax() {
   useTranslation();
-  const [setShowCardDetails] = useState(false);
+  // const [setShowCardDetails] = useState(false);
   const [showOTPModal, setShowOTPModal] = useState(false);
   const [otp, setOtp] = useState("");
   const [otpError, setOtpError] = useState("");
   const [acceptedTerms, setAcceptedTerms] = useState(false);
   const [isHelpOpen, setIsHelpOpen] = useState(false);
-  const [ setActivePaymentMethod] = useState<string | null>(
-    null
-  );
+  // const [ setActivePaymentMethod] = useState<string | null>(
+  //   null
+  // );
   const [transferAmount, setTransferAmount] = useState("");
   const [transferInProgress, setTransferInProgress] = useState(false);
   const [transferSuccess, setTransferSuccess] = useState(false);
