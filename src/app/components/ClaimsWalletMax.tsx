@@ -25,13 +25,13 @@ import { ClaimsWalletCardPlus } from "../components/ClaimsWalletCardPlus";
 
 export function ClaimsWalletMax() {
   useTranslation();
-  const [showCardDetails, setShowCardDetails] = useState(false);
+  const [setShowCardDetails] = useState(false);
   const [showOTPModal, setShowOTPModal] = useState(false);
   const [otp, setOtp] = useState("");
   const [otpError, setOtpError] = useState("");
   const [acceptedTerms, setAcceptedTerms] = useState(false);
   const [isHelpOpen, setIsHelpOpen] = useState(false);
-  const [activePaymentMethod, setActivePaymentMethod] = useState<string | null>(
+  const [ setActivePaymentMethod] = useState<string | null>(
     null
   );
   const [transferAmount, setTransferAmount] = useState("");
@@ -98,7 +98,7 @@ export function ClaimsWalletMax() {
     // In a real implementation, this would verify against a backend service
     if (otp === "123456") {
       setShowOTPModal(false);
-      setShowCardDetails(true);
+      // setShowCardDetails(true);
       setOtp("");
       setOtpError("");
     } else {
@@ -107,7 +107,7 @@ export function ClaimsWalletMax() {
   };
 
   const handleSelectPaymentMethod = (methodId: string) => {
-    setActivePaymentMethod(methodId);
+    // setActivePaymentMethod(methodId);
 
     const method = paymentMethods.find((m) => m.id === methodId);
     if (method) {
@@ -787,6 +787,6 @@ export function ClaimsWalletMax() {
   );
 }
 
-function setCopied(arg0: boolean) {
-  throw new Error("Function not implemented.");
-}
+// function setCopied(arg0: boolean) {
+//   throw new Error("Function not implemented.");
+// }
