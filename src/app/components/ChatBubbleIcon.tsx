@@ -1,4 +1,4 @@
-import React from 'react';
+"use client";
 
 export function ChatBubbleIcon({
   className = 'h-12 w-12',

@@ -22,6 +22,7 @@ import {
 import { HelpSidebarBase } from "../components/HelpSidebarBase";
 import { PageHelpButton } from "../components/PageHelpButton";
 import { ClaimsWalletCardPlus } from "../components/ClaimsWalletCardPlus";
+import Image from "next/image";
 
 export function ClaimsWalletMax() {
   useTranslation();
@@ -166,10 +167,12 @@ export function ClaimsWalletMax() {
           {/* Hero Section */}
           <div className="max-w-4xl mx-auto text-center mb-14">
             <div className="mb-8 flex justify-center">
-              <img
+              <Image
                 src="/Juice-2024-Logo-2000x800.png"
                 alt="Juice Financial"
-                className="h-16"
+                width={160}
+                height={64}
+                className="h-16 w-auto"
               />
             </div>
             <h1 className="text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">
@@ -210,17 +213,21 @@ export function ClaimsWalletMax() {
                   {/* Card visual */}
                   <div className="w-[200px] h-[120px] rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 p-4 flex-shrink-0 shadow-lg relative">
                     <div className="absolute top-2 left-2">
-                      <img
+                      <Image
                         src="/Juice-2024-Logo-2000x800.png"
                         alt="Juice Financial"
+                        width={2000}
+                        height={800}
                         className="h-6"
                       />
                     </div>
                     <div className="absolute bottom-2 right-2">
-                      <img
+                      <Image
                         src="https://www.mastercard.com/content/dam/public/mastercardcom/na/us/en/homepage/Home/mc-logo-52.svg"
                         alt="Mastercard"
-                        className="h-6"
+                        width={52}
+                        height={52}
+                        className="h-6 w-auto"
                       />
                     </div>
                     <div className="absolute bottom-2 left-2 text-[10px] font-mono text-white/70">

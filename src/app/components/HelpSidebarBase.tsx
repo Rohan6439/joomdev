@@ -45,6 +45,7 @@ export function HelpSidebarBase({ isOpen, onClose, content }: HelpSidebarProps) 
     e.preventDefault();
   };
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const handleMouseMove = (e: MouseEvent) => {
     if (!isDragging) return;
     const newWidth = startWidth - (e.clientX - startX);
@@ -67,7 +68,7 @@ export function HelpSidebarBase({ isOpen, onClose, content }: HelpSidebarProps) 
       document.removeEventListener('mousemove', handleMouseMove);
       document.removeEventListener('mouseup', handleMouseUp);
     };
-  }, [isDragging]);
+  }, [handleMouseMove, isDragging]);
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
@@ -117,22 +118,23 @@ export function HelpSidebarBase({ isOpen, onClose, content }: HelpSidebarProps) 
     }
   };
 
-  const backdropVariants = {
-    open: {
-      opacity: 1,
-      transition: {
-        duration: 0.2,
-        ease: "easeOut"
-      }
+const backdropVariants = {
+  open: {
+    opacity: 1,
+    transition: {
+      duration: 0.2,
+      ease: "easeOut",
     },
-    closed: {
-      opacity: 0,
-      transition: {
-        duration: 0.2,
-        ease: "easeIn"
-      }
-    }
-  };
+  },
+  closed: {
+    opacity: 0,
+    transition: {
+      duration: 0.2,
+      ease: "easeIn",
+    },
+  },
+};
+
 
   const contentVariants = {
     open: {
@@ -241,7 +243,7 @@ export function HelpSidebarBase({ isOpen, onClose, content }: HelpSidebarProps) 
 
             {/* Sidebar content */}
             <motion.div
-              className="flex-grow overflow-y-auto px-6 py-4 overflow-y-auto"
+              className="flex-grow overflow-y-auto px-6 py-4"
               variants={contentVariants}
             >
               <motion.div className="mb-6" variants={itemVariants}>
