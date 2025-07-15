@@ -1,4 +1,4 @@
-import React from 'react';
+"use client";
 import { motion } from 'framer-motion';
 import { Wallet, RefreshCw, CheckCircle2, ArrowRight } from 'lucide-react';
 

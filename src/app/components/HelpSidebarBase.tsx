@@ -181,7 +181,7 @@ const backdropVariants = {
             initial="closed"
             animate="open"
             exit="closed"
-            variants={backdropVariants}
+            // variants={backdropVariants}
             key="backdrop"
           />
 
@@ -189,7 +189,7 @@ const backdropVariants = {
             ref={sidebarRef}
             className="fixed top-5 right-5 bottom-5 rounded-lg bg-white dark:bg-gray-900 shadow-xl flex flex-col overflow-hidden origin-top-right z-50"
             style={{ width: `${width}px` }}
-            variants={sidebarVariants}
+            // variants={sidebarVariants}
             initial="closed"
             animate="open"
             exit="closed"
